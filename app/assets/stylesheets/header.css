@@ -1,0 +1,8 @@
+header {
+    height: 50px;
+    background-color: var(--cr-tertiary);
+    margin-top: -25px;
+    text-align: center;
+    font-size: var(--ft-h1-size);
+    padding: 20px;
+}
