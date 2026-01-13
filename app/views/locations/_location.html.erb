@@ -1,0 +1,12 @@
+<div id="<%= dom_id location %>">
+  <div>
+    <strong>Name:</strong>
+    <%= location.name %>
+  </div>
+
+  <div>
+    <strong>Input:</strong>
+    <%= location.input %>
+  </div>
+  <%= button_to "Destroy this location", location, method: :delete %>
+</div>

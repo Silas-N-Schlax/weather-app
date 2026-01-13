@@ -1,0 +1,15 @@
+<p style="color: green"><%= notice %></p>
+
+<% content_for :title, "Locations" %>
+
+<h1>Locations</h1>
+
+<%= turbo_frame_tag "location_form" do %>
+<%= render 'form', location: @location %>
+<% end %>
+
+<%= turbo_stream_from "locations" %>
+
+<%= turbo_frame_tag "locations" do %>
+<%= render @locations %>
+<% end %>
