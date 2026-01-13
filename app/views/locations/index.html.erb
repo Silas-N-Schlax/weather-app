@@ -1,15 +1,9 @@
-<p style="color: green"><%= notice %></p>
+<div class="main-container">
 
-<% content_for :title, "Locations" %>
+  <%= render "locations/sidebar" %>
 
-<h1>Locations</h1>
+  <div class="main-content">
+    <h1>Select or add a Locaiton to view the weather</h1>
+  </div>
 
-<%= turbo_frame_tag "location_form" do %>
-<%= render 'form', location: @location %>
-<% end %>
-
-<%= turbo_stream_from "locations" %>
-
-<%= turbo_frame_tag "locations" do %>
-<%= render @locations %>
-<% end %>
+</div>

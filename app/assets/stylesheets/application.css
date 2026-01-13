@@ -8,3 +8,49 @@
  *
  * Consider organizing styles into separate files for maintainability.
  */
+
+:root {
+  /* Primary background colors */
+  --cr-main: #0d1117;        /* darkest background - main content */
+  --cr-secondary: #161b22;   /* sidebar background - slightly lighter */
+  --cr-tertiary: #1b222d;    /* header/footer - middle tone */
+
+  /* Accent / text colors */
+  --cr-text-primary: #c9d1d9;   /* main text - light gray / white-ish */
+  --cr-text-secondary: #8b949e; /* secondary text - muted light blue/gray */
+  --cr-accent: #58a6ff;         /* clickable text, icons, highlights - light blue */
+  --cr-error: #f85149;          /* error / alerts - vivid red */
+
+  /* Borders and subtle elements */
+  --cr-border: #30363d;        /* thin lines / dividers */
+  --cr-hover: #21262d;         /* hover / interactive bg shade */
+
+  /* Optional: subtle backgrounds for cards or panels */
+  --cr-card-bg: #161b22;       /* matches sidebar but can be used for cards */
+  --cr-card-accent: #21262d;   /* slightly lighter for nested cards or panels */
+
+  --ft-h1-size: 24px;
+  --ft-p-size: 16px;
+}
+
+html, body {
+    margin: 0;
+    padding: 0;
+    color: var(--cr-text-primary);
+    background-color: var(--cr-main);
+}
+
+.turbo-progress-bar {
+  visibility: hidden;
+}
+
+.main-container {
+    display: flex;
+    flex-direction: row;
+}
+
+
+@import './header.css';
+@import './footer.css';
+@import './main_content.css';
+@import './sidebar.css';

@@ -1,12 +1,17 @@
-<div id="<%= dom_id location %>">
-  <div>
+<div class="loc-card" id="<%= dom_id location %>">
+  <div class="loc-name">
     <strong>Name:</strong>
     <%= location.name %>
   </div>
 
-  <div>
-    <strong>Input:</strong>
-    <%= location.input %>
+  <div class="loc-lat">
+    <strong>Latitude:</strong>
+    <%= location.lat %>
   </div>
-  <%= button_to "Destroy this location", location, method: :delete %>
+
+  <div class="loc-long">
+    <strong>Longitude</strong>
+    <%= location.long %>
+  </div>
+  <%= button_to "Delete", location, method: :delete %>
 </div>
