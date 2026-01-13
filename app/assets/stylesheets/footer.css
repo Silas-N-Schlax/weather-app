@@ -1,0 +1,11 @@
+footer {
+    height: 75px;
+    background-color: var(--cr-tertiary);
+    text-align: center;
+    font-size: var(--ft-p-size);
+    padding: 20px;
+}
+
+footer p {
+    line-height: 0.5;
+}
