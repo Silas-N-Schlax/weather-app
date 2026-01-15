@@ -17,5 +17,11 @@
     <strong>Longitude</strong>
     <%= location.long %>
   </div>
-  <%= button_to "Delete", location, method: :delete %>
+  <div 
+    class="delete-button"
+    id="<%= dom_id location %>"
+    data-controller="sidebar-delete"
+    data-action="click->sidebar-delete#delete">
+    <%= button_to "Delete", location, method: :delete %>
+  </div>
 </div>
