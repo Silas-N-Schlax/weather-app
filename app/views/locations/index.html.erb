@@ -3,7 +3,15 @@
   <%= render "locations/sidebar" %>
 
   <div class="main-content">
-    <h1>Select or add a Locaiton to view the weather</h1>
+
+    <div class="weather-container" style="visibility: hidden;"></div>
+
+    <div class="no-data">
+      <h1>Select or add a Locaiton to view the weather</h1>
+    </div>
+    <div class="loading" style="visibility: hidden;">
+      <h1>Content Loading...</h1>
+    </div>
   </div>
 
 </div>
