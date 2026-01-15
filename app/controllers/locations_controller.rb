@@ -25,8 +25,6 @@ class LocationsController < ApplicationController
   def create
     wrapper = LocationWrapper.new(location_params)
     result = wrapper.call
-    puts result
-    puts "#️⃣ Wrapper"
     @location = Location.new(
       name: location_params["name"],
       input: location_params["input"],
