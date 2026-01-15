@@ -6,7 +6,7 @@ class IpApi
   def call
     response = HTTParty.get("https://ipapi.co/#{@ip}/json/")
     stringified_json = JSON.parse(response.body)
-    if stringified_json["error"] === true
+    if stringified_json["error"]
       {
         "error" => true,
         "reason" => stringified_json["reason"]

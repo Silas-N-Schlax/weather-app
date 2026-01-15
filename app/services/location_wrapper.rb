@@ -8,7 +8,7 @@ class LocationWrapper
 
   def call
     data = {}
-    if isIp?(@input)
+    if is_ip?(@input)
       data = IpApi.new(@input).call
     else
       data = AddressApi.new(@input).call
@@ -16,7 +16,7 @@ class LocationWrapper
     data
   end
 
-  def isIp?(string)
+  def is_ip?(string)
     IPAddr.new(string)
     true
   rescue IPAddr::InvalidAddressError

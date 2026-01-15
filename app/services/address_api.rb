@@ -16,8 +16,8 @@ class AddressApi
     else
       {
         "error" => false,
-        "lat" => stringified_json["latt"],
-        "long" => stringified_json["longt"]
+        "lat" => stringified_json["latt"].to_f,
+        "long" => stringified_json["longt"].to_f
       }
     end
   end
