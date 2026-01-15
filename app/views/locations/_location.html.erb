@@ -1,4 +1,8 @@
-<div class="loc-card" id="<%= dom_id location %>">
+<div 
+  class="loc-card" 
+  id="<%= dom_id location %>"
+  data-controller="sidebar"
+  data-action="click->sidebar#select">
   <div class="loc-name">
     <strong>Name:</strong>
     <%= location.name %>
