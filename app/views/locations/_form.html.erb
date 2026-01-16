@@ -11,17 +11,17 @@
     </div>
   <% end %>
 
-  <div>
-    <%= form.label :name, style: "display: block" %>
-    <%= form.text_field :name %>
-  </div>
+  <div class="form">
+    <div>
+      <%= form.text_field :name, placeholder: "Locaiton Name" %>
+    </div>
 
-  <div>
-    <%= form.label :input, style: "display: block" %>
-    <%= form.text_field :input %>
-  </div>
+    <div>
+      <%= form.text_field :input, placeholder: "Ip / St. Address" %>
+    </div>
 
-  <div>
-    <%= form.submit %>
+    <div>
+      <%= form.submit %>
+    </div>
   </div>
 <% end %>
