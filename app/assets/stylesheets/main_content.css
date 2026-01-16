@@ -1,0 +1,109 @@
+.weather-container {
+    padding: 15px;
+    margin: 0;
+}
+
+.current {
+    display: flex;
+    flex-direction: row;
+    gap: 25px;
+    max-height: 30%;
+    height: 100%;
+    .current-left{
+        border: 2px solid var(--cr-text-secondary);
+        background-color: var(--cr-card-accent);
+        border-radius: 16px;
+        padding: 7px;
+        height: 100%;
+        width: 38%;
+        min-width: 175px;
+    }
+
+    .top {
+        display: flex;
+        flex-direction: row;
+        font-size: 20px;
+        justify-content: center;
+        gap: 5px;
+        padding-top: 5px;
+    }
+
+    .temp {
+        text-align: center;
+        font-size: 55px;
+        font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+        color: var(--cr-accent);
+        padding-top: 10px;
+        padding-bottom: 5px;
+        
+    }
+
+    .feels {
+        text-align: center;
+        font-size: 16px;
+        margin: 0;
+    }
+
+    .high-low {
+        display: flex;
+        flex-direction: row;
+        gap: 8px;
+        justify-content: center;
+        color: var(--cr-text-primary)
+    }
+
+
+    .current-right {
+        border: 2px solid var(--cr-text-secondary);
+        background-color: var(--cr-card-accent);
+        border-radius: 16px;
+        /* padding: 7px; */
+        height: 100%;
+        width: 60%;
+        min-width: 175px;
+        font-size: 18px;
+    }
+
+    .header {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        padding: 5px 15px 5px 15px;
+        background-color: rgba(255, 255, 255, 0.05);
+        border-top-right-radius: 15.5px;
+        border-top-left-radius: 15.5px;
+    }
+
+    .rain {
+        display: flex;
+        flex-direction: row;
+        gap: 5px;
+        font-size: 25px;
+        padding: 20px;
+        justify-content: center;
+    }
+
+    .sunriseset {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        padding-top: 5px;
+        padding-bottom: 15px;
+        gap: 5px;
+        font-size: 16px;
+    }
+
+    .footer-card {
+        display: flex;
+        flex-direction: row;
+        padding: 5px;
+        gap: 5px;
+        font-size: 18px;
+        justify-content: center;
+        max-height: 40px;
+    }
+
+    .footer-card p {
+        margin: 0;
+    }
+}
