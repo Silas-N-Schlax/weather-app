@@ -12,10 +12,10 @@ export default class extends Controller {
     if (loadedContent.hasChildNodes()) {
       if (loadedContent.id === locationID) {
         loadedContent.innerHTML = ''
-        loadedContent.style.visibility = 'hidden';
+        loadedContent.style.display = 'none';
         loadedContent.id = ""
-        document.querySelector('.no-data').style.visibility = 'visible';
-        document.querySelector('.loading').style.visibility = 'hidden';
+        document.querySelector('.no-data').style.display = 'block';
+        document.querySelector('.loading').style.display = 'none';
       }
     }
   }
