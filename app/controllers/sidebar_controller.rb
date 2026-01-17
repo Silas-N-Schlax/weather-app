@@ -6,6 +6,10 @@ class SidebarController < ApplicationController
     weather_data = WeatherApi.new(location.lat, location.long)
     result = weather_data.call
 
+    chart_data = ChartApi.new(result["data"]["daily"])
+    chart_url = chart_data.call
+    puts "#️⃣"
+
     if result["error"]
       puts result["reason"]
       render json: {
@@ -16,7 +20,8 @@ class SidebarController < ApplicationController
     end
     render json: {
       error: false,
-      data: result["data"]
+      data: result["data"],
+      chart: chart_url
     }
   end
 end
