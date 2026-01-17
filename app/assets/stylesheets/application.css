@@ -38,6 +38,8 @@ html, body {
     padding: 0;
     color: var(--cr-text-primary);
     background-color: var(--cr-main);
+    overflow-x: hidden;
+    width: 100%;
 }
 
 .turbo-progress-bar {
@@ -51,7 +53,7 @@ html, body {
 }
 
 .main-content {
-    width: 100%;
+    width: 78%;
     flex-grow: 1;
 }
 
