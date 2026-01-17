@@ -15,6 +15,15 @@
         padding: 15px;
     }
 
+    .error-div {
+        color: var(--cr-error);
+        font-size: 14px;
+        h2 {
+            font-size: 15px;
+        }
+        
+    }
+
     .form {
         display: flex;
         flex-direction: column;
