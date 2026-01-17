@@ -8,10 +8,13 @@ export default class extends Controller {
   connect() { }
   
   async select(e) {
-    this.loadLoader()
-
     const locationID = e.currentTarget.id
     const name = this.element.dataset.locationNameValue
+    if (this.shouldLoadContent(locationID) === false) {
+      return;
+    }
+    this.loadLoader()
+
     try {
       const response = await fetch('sidebar/get_weather_data', {
       method: "POST",
@@ -27,9 +30,7 @@ export default class extends Controller {
       alert(`There has been an error, please try again later \nerr.msg: ${result.reason}`)
     }
 
-    if (this.shouldLoadContent(locationID)) {
-      this.loadContent(result, locationID, name)
-    }
+    this.loadContent(result, locationID, name)
 
     } catch (error) {
       alert(`There has been an error, please try again later \nerr.msg: ${error}`)
@@ -112,7 +113,47 @@ export default class extends Controller {
           </div>
         </div>
       </div>
+      <div class="daily">
+        <div class="daily-content">
+          <div class="top-daily">
+            <div class="icon-calendar"></div>
+            <div>16 Day Forcast</div>
+          </div>
+          <div class="cards-wrapper">
+            <div class="cards">
+              ${this.generateDailyCards(
+                daily.time,
+                daily.temperature_2m_max,
+                daily.temperature_2m_min,
+                daily.weather_code,
+                current.is_day
+              )}
+            </div>
+          </div>
+        </div>
+      </div>
     `
+  }
+
+  generateDailyCards(time, temp_max, temp_min, weather_code, isDay) {
+    let html = ``;
+    console.log("made it!")
+    for (let i = 0; i < 15; i++) {
+      html +=`
+      <div id="${i}" class="card">
+        <div class="max">${temp_max[i]}</div>
+        <div class="min">${temp_min[i]}</div>
+        <div class="${this.codeReaderIcon(weather_code[i], isDay)} icon"></div>
+        <div>${new Date(time[i] * 1000).toLocaleDateString(undefined,
+          {
+            month: "short",
+            day: "2-digit"
+          }
+        )}</div>
+      </div>
+      `
+    }
+    return html
   }
 
 
@@ -134,15 +175,15 @@ export default class extends Controller {
       65: "icon-cloud-rain",
       66: "icon-cloud-rain",
       67: "icon-cloud-rain",
-      71: "Snowing",
-      73: "Snowing",
-      75: "Snowing",
-      77: "Snowing",
+      71: "icon-cloud-snow",
+      73: "icon-cloud-snow",
+      75: "icon-cloud-snow",
+      77: "icon-cloud-snow",
       80: "Heavy Rain",
       81: "Heavy Rain",
       83: "Heavy Rain",
-      85: "Snowing",
-      86: "Snowing",
+      85: "icon-cloud-snow",
+      86: "icon-cloud-snow",
       95: "Heavy Storm",
       96: "Heavy Storm",
       99: "Heavy Storm"
@@ -181,15 +222,15 @@ export default class extends Controller {
       65: "Raining",
       66: "Raining",
       67: "Raining",
-      71: "Snowing",
-      73: "Snowing",
-      75: "Snowing",
-      77: "Snowing",
+      71: "icon-cloud-snow",
+      73: "icon-cloud-snow",
+      75: "icon-cloud-snow",
+      77: "icon-cloud-snow",
       80: "Heavy Rain",
       81: "Heavy Rain",
       83: "Heavy Rain",
-      85: "Snowing",
-      86: "Snowing",
+      85: "icon-cloud-snow",
+      86: "icon-cloud-snow",
       95: "Heavy Storm",
       96: "Heavy Storm",
       99: "Heavy Storm"
