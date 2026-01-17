@@ -26,7 +26,7 @@ production:
   primary:
     <<: *default
     database: storage/production.sqlite3
-    url: <%= ENV["postgres://postgres:rcWCgRy58YEHsSx@silas-schlax-weather-app.flycast:5432"] %>
+    url: <%= ENV["DATABASE_URL"] %>
   cache:
     <<: *default
     database: storage/production_cache.sqlite3
