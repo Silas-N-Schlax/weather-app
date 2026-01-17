@@ -48,4 +48,5 @@ This application allows you to save a location and view its current and 16-day w
 
 # Time:
 - A little **over 12** hours was used for the inital portion, which included the main assignment and bonus #2.
-- I wanted to complete bonus #1 and #3, so I did so outside the 12 hours spending **0** hrs. To show you what was written afterwards I ensured all code was commited before I began this, every commit hence thereafter will include **"[POST-LIMIT]"** before my commit message indicating this was written in my addational time.
+- I wanted to complete bonus #1 and #3, so I did so outside the 12 hours spending **3** hrs. To show you what was written afterwards I ensured all code was commited before I began this, every commit hence thereafter will include **"[POST-LIMIT]"** before my commit message indicating this was written in my addational time.
+- I achived bonus #1 in **30 minutes**, unfortunatly I was unable to solve errors while attempting #3 over the 2.5 hours, that I ran out of time I had free for the week.
