@@ -1,11 +1,12 @@
 
 class ChartApi
   def initialize(data)
+    p data
     @time_string = format_unixtime_to_day_and_stringify(data["time"])
     @temp_max = stringify_data(data["temperature_2m_max"])
     @temp_min = stringify_data(data["temperature_2m_min"])
-    @max_temp = (data["temperature_2m_max"].max / 10.0).ceil * 10 # What the max a min temp range is for the chart
-    @min_temp = data["temperature_2m_min"].min.floor(-1)
+    @max_temp = (data["temperature_2m_max"].compact.max / 10.0).ceil * 10 # What the max a min temp range is for the chart
+    @min_temp = data["temperature_2m_min"].compact.min.floor(-1)
   end
 
   def call

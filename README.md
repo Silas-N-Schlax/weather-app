@@ -5,7 +5,7 @@ This application allows you to save a location and view its current and 16-day w
 ## How to Use the App:
 
 1. Load the website:  
-   **(url)**
+   Website not hosted, clone this repo, setup an instance and run the server using **rails s**.
 
 2. Enter a **name** for your location  
    This is a custom label and does not need to match the actual location—get creative!
