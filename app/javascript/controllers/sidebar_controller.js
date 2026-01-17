@@ -64,7 +64,7 @@ export default class extends Controller {
     console.log(this.codeReaderText("0"))
     const weatherDiv = document.querySelector(".weather-container")
     if (!weatherDiv) return;
-    weatherDiv.innerHTML = this.renderer(data.latitude, data.longitude, data.current, data.daily, name)
+    weatherDiv.innerHTML = this.renderer(data.latitude, data.longitude, data.current, data.daily, name, result.chart)
     weatherDiv.style.display = 'block';
     weatherDiv.id = locationID
 
@@ -72,7 +72,7 @@ export default class extends Controller {
     document.querySelector('.loading').style.display = 'none';
   }
 
-  renderer(lat, long, current, daily, name) {
+  renderer(lat, long, current, daily, name, chart) {
     console.log(daily.sunset[0])
     return `
       <div class="current">
@@ -131,6 +131,9 @@ export default class extends Controller {
             </div>
           </div>
         </div>
+      </div>
+      <div class="chart">
+        <img src="${chart}" alt="Weather chart">
       </div>
     `
   }
