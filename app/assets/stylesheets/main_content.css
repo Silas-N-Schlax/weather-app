@@ -1,7 +1,8 @@
 .weather-container {
     padding: 15px;
     margin: 0;
-    max-width: 100%;   
+    max-width: 100%;  
+    scrollbar-color: var(--cr-accent) rgba(255, 255, 255, 0.08); 
 }
 
 .current {
@@ -112,7 +113,6 @@
     padding-top: 20px;
     max-width: 100%;
     overflow: hidden;
-    scrollbar-color: var(--cr-accent) rgba(255, 255, 255, 0.08);
     
     .daily-content {
         border: 2px solid var(--cr-text-secondary);
@@ -178,4 +178,16 @@
             font-size: 26px;
         }
     }
+}
+
+.chart {
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+}
+.chart img {
+    border: 2px solid var(--cr-text-secondary);
+    border-radius: 18px;
+    width: 100%;
+    height: auto;
 }
