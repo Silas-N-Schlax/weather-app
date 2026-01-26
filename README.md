@@ -6,6 +6,7 @@ This application allows you to save a location and view its current and 16-day w
 
 1. Load the website:  
    Website not hosted, clone this repo, setup an instance and run the server using **rails s**.
+   - **Note:** Before this app will work you will need to create a .env file and add a token "GEO_API_KEY" with an api key from [Geo Code Api](https://geocode.xyz/api).
 
 2. Enter a **name** for your location  
    This is a custom label and does not need to match the actual location—get creative!
