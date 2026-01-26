@@ -8,7 +8,6 @@ class SidebarController < ApplicationController
 
     chart_data = ChartApi.new(result["data"]["daily"])
     chart_url = chart_data.call
-    puts "#️⃣"
 
     if result["error"]
       puts result["reason"]
