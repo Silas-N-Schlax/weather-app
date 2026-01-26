@@ -10,7 +10,7 @@ class ChartApi
   end
 
   def call
-    "https://image-charts.com/chart?cht=lc&chs=900x400&chco=58a6ff,f85149&chls=3|3&chdl=High Temp|Low Temp&chdls=c9d1d9,12&chtt=Highs and Lows Chart&chts=c9d1d9,20&chf=bg,s,21262d&chxt=x,y&chd=t:#{@temp_max}|#{@temp_min}&chxl=0:#{@time_string}&chxs=0,c9d1d9,14|1,c9d1d9&chxr=1,#{@min_temp},#{@max_temp}"
+    "https://image-charts.com/chart?cht=lc&chs=900x400&chco=f85149,58a6ff&chls=3|3&chdl=High Temp|Low Temp&chdls=c9d1d9,12&chtt=Highs and Lows Chart&chts=c9d1d9,20&chf=bg,s,21262d&chxt=x,y&chd=a:#{@temp_max}|#{@temp_min}&chxl=0:#{@time_string}&chxs=0,c9d1d9,14|1,c9d1d9&chxr=1,#{@min_temp},#{@max_temp}"
   end
 
   def format_unixtime_to_day_and_stringify(data)
