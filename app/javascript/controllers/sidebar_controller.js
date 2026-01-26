@@ -117,7 +117,7 @@ export default class extends Controller {
         <div class="daily-content">
           <div class="top-daily">
             <div class="icon-calendar"></div>
-            <div>16 Day Forcast</div>
+            <div>${daily.time.length} Day Forcast</div>
           </div>
           <div class="cards-wrapper">
             <div class="cards">
