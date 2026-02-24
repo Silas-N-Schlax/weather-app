@@ -18,7 +18,7 @@ gem "stimulus-rails"
 gem "jbuilder"
 
 
-gem 'rspec-rails', '~> 8.0', '>= 8.0.1'
+gem 'rspec-rails', '~> 8.0'
 
 gem 'httparty', '~> 0.24.0'
 
